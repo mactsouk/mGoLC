@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-
 	minusS := flag.Bool("s", false, "Sockets")
 	minusP := flag.Bool("p", false, "Pipes")
 	minusSL := flag.Bool("sl", false, "Symbolic Links")
@@ -29,7 +28,7 @@ func main() {
 
 	if len(flags) == 0 {
 		fmt.Println("Not enough arguments!")
-		os.Exit(1)
+		return
 	}
 
 	Path := flags[0]
@@ -84,6 +83,6 @@ func main() {
 	err := filepath.Walk(Path, walkFunction)
 	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
+		return
 	}
 }
