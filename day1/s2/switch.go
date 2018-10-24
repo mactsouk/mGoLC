@@ -26,7 +26,7 @@ func tellInterface(x interface{}) {
 	case rectangle:
 		fmt.Println("This is a rectangle!")
 	default:
-		fmt.Printf("Unknown type %T!\n", v)
+		fmt.Printf("Unknown type: %T!\n", v)
 	}
 }
 
