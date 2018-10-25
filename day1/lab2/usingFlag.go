@@ -14,7 +14,6 @@ import (
 )
 
 func main() {
-
 	subdirs := flag.Bool("s", false, "subdirectory")
 	count := flag.Int("c", 0, "int")
 	name := flag.String("n", "test", "string")
