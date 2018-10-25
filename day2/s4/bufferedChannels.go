@@ -13,13 +13,23 @@ func main() {
 	numbers <- 4
 
 	// This will not work
-	// numbers <- 5
+	// numbers <- 15
 
 	// This will work
 	select {
-	case numbers <- 5:
+	case numbers <- 15:
 	default:
 		fmt.Println("Not enough space in the channel!")
+		num := <-numbers
+		fmt.Println(num)
+	}
+
+	select {
+	case numbers <- 15:
+	default:
+		fmt.Println("Not enough space in the channel!")
+		num := <-numbers
+		fmt.Println(num)
 	}
 
 	// You can read a buffered channel as usual

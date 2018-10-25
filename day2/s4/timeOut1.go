@@ -8,14 +8,14 @@ import (
 func main() {
 	c1 := make(chan string)
 	go func() {
-		time.Sleep(time.Second * 3)
+		time.Sleep(time.Second * 1)
 		c1 <- "c1 OK"
 	}()
 
 	select {
 	case res := <-c1:
 		fmt.Println(res)
-	case <-time.After(time.Second * 1):
+	case <-time.After(time.Second * 2):
 		fmt.Println("timeout c1")
 	}
 
