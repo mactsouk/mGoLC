@@ -1,9 +1,10 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
+	"github.com/spf13/cobra"
 )
 
 func main() {
-  fmt.Println("Hello world!")
+	fmt.Println("Hello world!")
 }
