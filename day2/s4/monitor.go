@@ -55,6 +55,7 @@ func main() {
          set(rand.Intn(10 * n))
       }()
    }
+
    w.Wait()
    fmt.Printf("\nLast value: %d\n", read())
 }
